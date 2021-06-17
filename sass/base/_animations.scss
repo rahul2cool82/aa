@@ -1,0 +1,25 @@
+@keyframes slideImageOdd{
+    0%{
+        transform: translate(-50%, -50%) translateZ(0);
+    }
+    30%{
+        transform: translate(-50%, -50%) translateZ(10vw);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-50%, -50%) translateZ(10vw) translateY(10vw);
+    }
+}
+
+@keyframes slideImageEven{
+    0%{
+        transform: translate(-50%, -50%) translateZ(0);
+    }
+    30%{
+        transform: translate(-50%, -50%) translateZ(-10vw);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-50%, -50%) translateZ(-10vw) translateY(-10vw);
+    }
+}

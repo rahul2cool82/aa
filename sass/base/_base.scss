@@ -1,0 +1,37 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    @media only screen and ( max-width: 64em ){
+        font-size: 56.25%;
+    }
+    @media only screen and ( max-width: 48em ){
+        font-size: 50%;
+    }
+    @media only screen and ( max-width: 28.125em ){
+        font-size: 43.75%;
+    }
+}
+
+body{
+    font-size: 1.4rem;
+    color: #0a0a0a;
+    position: relative;
+    display: block;
+    font-family: $font--lato;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    display: block;
+}

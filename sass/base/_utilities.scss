@@ -1,0 +1,165 @@
+.equity{
+    padding: var(--component--padding);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & a{
+        margin-bottom: 2rem;
+    }
+    & p{
+        @include text-justify-center;
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        max-width: var(--paragraph--width);
+    }
+    & article{
+        @include text-justify-center;
+        padding: 3rem 3rem 0;
+        position: relative;
+        color: #000;
+        font-weight: 300;
+        line-height: 2;
+        font-size: 1.4rem;
+        max-width: var(--article--width);
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+        }
+
+    }
+}
+
+.team{
+    width: 100%;
+    padding: var(--component--padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__flexBox{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: var(--component--width);
+        justify-content: center;
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    &__member{
+        --number: 4;
+        --width: calc( (100% - (( var(--number) - 1 ) * 1.5rem) ) / var(--number) );
+        width: var( --width );
+        text-align: center;
+        margin: 1rem 1.5rem 1rem 0;
+
+        @media only screen and ( max-width: 48em ){
+            --number: 3;
+        }
+
+        @media only screen and ( max-width: 28.125em ){
+            --number: 2;
+        }
+
+        &:nth-child( 4n ){
+            margin-right: 0;
+            @media only screen and ( max-width: 48em ){
+                margin-right: 1.5rem;
+            }
+        }
+
+        &:nth-child( 3n ){
+            margin-right: 1.5rem;
+            @media only screen and ( max-width: 48em ){
+                margin-right: 0;
+            }
+        }
+
+        &:nth-child( 2n + 1 ){
+            @media only screen and ( max-width: 28.125em ){
+                margin-right: 1.5rem;
+            }
+        }
+
+        &:nth-child( 2n ){
+            @media only screen and ( max-width: 28.125em ){
+                margin-right: 0;
+            }
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        & img{
+            width: 100%;
+            object-fit: contain;
+        }
+        & h4{
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        & p{
+            color: #ccc;
+        }
+    }
+
+    &__floatBox{
+        display: table;
+        clear: both;
+        width: 100%;
+        margin-top: 3rem;
+        max-width: var(--component--width);
+
+        & .team__member{
+            float: left;
+        }
+
+    }
+
+}
+
+.investments{
+    padding: var(--component--padding);
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__gridBox{
+        --number: 3;
+        --box--width: calc( (100% - (( var(--number) - 1 ) * 1.5rem) ) / var(--number) );
+        width: 100%;
+        max-width: var(--component--width);
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, var(--box--width) );
+        justify-items: center;
+        grid-gap: 1.5rem;
+        @media only screen and ( max-width: 32em ){
+            --number: 2;
+        }
+    }
+    &__block{
+        width: 100%;
+        position: relative;
+        & img{
+            width: 100%;
+            object-fit: cover;
+        }
+        & p{
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            width: calc( 100% - 2rem );
+            color: #fff;
+        }
+    }
+}

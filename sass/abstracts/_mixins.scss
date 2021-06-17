@@ -1,0 +1,12 @@
+@mixin absolute-full-default {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin text-justify-center {
+    text-align: justify;
+    text-align-last: center;
+}
