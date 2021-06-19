@@ -4,7 +4,12 @@ const slideshow = () => {
     const buttons = document.querySelectorAll('.slideshow__buttons--box');
     const dots = document.querySelectorAll('.slideshow__dots--box');
 
-    const time = 3000;
+    const time = {
+        slideChange: 8000,
+        stateChange: 100,
+        reset: 1001
+    };
+
     let currentSlide = 0;
 
     const blockEvents = ( ) => {
@@ -40,7 +45,7 @@ const slideshow = () => {
         currentSlideImageBox.style = `z-index: 2;`;
         currentSlideImageBox.classList.remove( 'select' );
 
-        const slideChanging = setTimeout(
+        const slideStateChange = setTimeout(
             () => {
                 currentSlideContentBox.classList.remove( 'select' );
                 currentSlideDot.classList.remove('select');
@@ -60,13 +65,13 @@ const slideshow = () => {
                         slideTimeout = setTimeout(
                             () => {
                                 slideSettlement( next, next + 1 );
-                            }, time
+                            }, time.slideChange
                         );
 
-                    }, 1001
+                    }, time.reset
                 );
 
-            }, 100
+            }, time.stateChange
         );
     }
 
@@ -82,7 +87,7 @@ const slideshow = () => {
     let slideTimeout = setTimeout(
         () => {
             slideChange( currentSlide , currentSlide + 1);
-        }, time
+        }, time.slideChange
     );
 
     Array.from( buttons ).forEach( ( button ) => {
