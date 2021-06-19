@@ -168,7 +168,8 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      background-color: transparent; }
       .slideshow__contents--box h1 {
         font-weight: 700;
         font-size: 6.5vw;
