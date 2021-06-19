@@ -4,7 +4,7 @@ const slideshow = () => {
     const buttons = document.querySelectorAll('.slideshow__buttons--box');
     const dots = document.querySelectorAll('.slideshow__dots--box');
 
-    const time = 8000;
+    const time = 3000;
     let currentSlide = 0;
 
     const blockEvents = ( ) => {
@@ -66,7 +66,7 @@ const slideshow = () => {
                     }, 1001
                 );
 
-            }, 1
+            }, 100
         );
     }
 
