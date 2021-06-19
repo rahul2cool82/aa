@@ -42,9 +42,10 @@ const slideshow = () => {
 
         const slideChanging = setTimeout(
             () => {
-                currentSlideImageBox.classList.add('unset');
                 currentSlideContentBox.classList.remove( 'select' );
                 currentSlideDot.classList.remove('select');
+                currentSlideImageBox.classList.add('unset');
+                
                 nextSlideImageBox.classList.add('select');
                 nextSlideContentBox.classList.add('select');
                 nextSlideDot.classList.add('select');
@@ -65,12 +66,11 @@ const slideshow = () => {
                     }, 1001
                 );
 
-            }, 10
+            }, 1
         );
     }
 
     const slideSettlement = ( from, to ) => {
-
         if ( from === to ){
             return;
         }
@@ -81,7 +81,7 @@ const slideshow = () => {
 
     let slideTimeout = setTimeout(
         () => {
-            slideChange(0,1);
+            slideChange( currentSlide , currentSlide + 1);
         }, time
     );
 
