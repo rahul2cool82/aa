@@ -10,7 +10,6 @@
   30% {
     transform: translate(-50%, -50%) translateZ(10vw); }
   100% {
-    filter: blur(10px);
     opacity: 0;
     transform: translate(-50%, -50%) translateZ(10vw) translateY(10vw); } }
 
@@ -20,7 +19,6 @@
   30% {
     transform: translate(-50%, -50%) translateZ(-10vw); }
   100% {
-    filter: blur(10px);
     opacity: 0;
     transform: translate(-50%, -50%) translateZ(-10vw) translateY(-10vw); } }
 
@@ -141,7 +139,7 @@ a {
           object-fit: cover;
           transform: translate(-50%, -50%) translateZ(0vw);
           transition: .5s;
-          will-change: transform;
+          will-change: transform, filter, opacity;
           top: 50%;
           left: 50%; }
       .slideshow__images--box.unset .cut:nth-child(2n) img {

@@ -93,7 +93,7 @@
                     object-fit: cover;
                     transform: translate(-50%, -50%) translateZ(0vw);
                     transition: .5s;
-                    will-change: transform;
+                    will-change: transform, filter, opacity;
                     top: 50%;
                     left: 50%;
                 }
